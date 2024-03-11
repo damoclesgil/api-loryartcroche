@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ordems",
+  "info": {
+    "singularName": "ordem",
+    "pluralName": "ordems",
+    "displayName": "ordem"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "idCompra": {
+      "type": "uid"
+    },
+    "valorDaCompra": {
+      "type": "float"
+    }
+  }
+}

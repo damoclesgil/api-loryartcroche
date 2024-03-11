@@ -13,6 +13,7 @@ import customisations from "../../src/admin/app.js";
 
 renderAdmin(document.getElementById("strapi"), {
   customisations,
+
   plugins: {
     "apollo-sandbox": apolloSandbox,
     "strapi-cloud": strapiCloud,
