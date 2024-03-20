@@ -1,11 +1,30 @@
-```
-email: damoclesgil@gmail.com
-Senha do admin: Lori123456
-```
 
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+
+> Email: damoclesgil@gmail.com
+> Senha do admin: Lori123456
+
+Env Files
+
+```env
+HOST=0.0.0.0
+PORT=1337
+APP_KEYS=fKqLuBukkZe0ROluylBddw==,TIb9JtwfDYV/343KAM0Ihw==,fRfqa5fZubXvcnkbeHsp5g==,Sno1JldL2bCyZlmnr5eOMw==
+API_TOKEN_SALT=H5JzS8HAlWlBdWyzFbZpbw==
+ADMIN_JWT_SECRET=yYkZnKjW6VIVF/mDPCDSEA==
+TRANSFER_TOKEN_SALT=pDPIXD83v0mSL5qDgxfTwA==
+# Database
+DATABASE_CLIENT=postgres
+DATABASE_HOST=127.0.0.1
+DATABASE_PORT=5432
+DATABASE_NAME=loryartcroche
+DATABASE_USERNAME=postgres
+DATABASE_PASSWORD=
+DATABASE_SSL=false
+JWT_SECRET=VXt/Dz0uYPV/+Rfg1ISrAQ==
+```
 
 ### `develop`
 

@@ -4,18 +4,20 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
+    "dev": "dotenv -e .env.local strapi develop",
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "out": "npm outdated"
   },
   "dependencies": {
     "@creazy231/strapi-plugin-apollo-sandbox": "^0.0.13",
-    "@strapi/plugin-cloud": "4.20.4",
-    "@strapi/plugin-graphql": "^4.20.4",
-    "@strapi/plugin-i18n": "^4.20.4",
-    "@strapi/plugin-users-permissions": "^4.20.4",
-    "@strapi/strapi": "4.20.4",
+    "@strapi/plugin-cloud": "4.21.0",
+    "@strapi/plugin-graphql": "^4.21.0",
+    "@strapi/plugin-i18n": "^4.21.0",
+    "@strapi/plugin-users-permissions": "^4.21.0",
+    "@strapi/strapi": "4.21.0",
     "pg": "8.11.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -32,5 +34,8 @@
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv-cli": "^7.4.1"
+  }
 }
