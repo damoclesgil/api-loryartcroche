@@ -9,13 +9,22 @@ const config = {
     favicon: Icon,
     title: 'lory'
   },
-  locales: ["pt-BR"],
+  locales: ["pt-BR", "en"],
+  // https://github.com/strapi/strapi/blob/develop/packages/core/admin/admin/src/translations/en.json
+  // https://github.com/strapi/strapi/blob/develop/packages/core/admin/admin/src/translations/pt-BR.json
   translations: {
-    'ptBR': {
-      "Auth.form.welcome.title": "Seja bem vindo a Dâmocles Gil!",
+    'pt-BR': {
+      "Auth.form.welcome.title": "Seja bem vindo 😊!",
       "Auth.form.welcome.subtitle": "Entrar na sua conta",
       Users: "Userson",
-      "app.components.LeftMenu.navbrand.title": "Dâmocles Gil Dashboard",
+      "app.components.LeftMenu.navbrand.title": "Administração Loryartcroche",
+      "app.components.LeftMenu.navbrand.workplace": "Local para cadastrar as bolsas",
+      "global.content-manager": "Cadastrar Produtos",
+      "content-manager.HeaderLayout.button.label-add-entry": "Cadastrar",
+      "Strapi.dashboard": "Dashboard",
+      "global.plugins.upload": "Adicionar Imagens",
+      "Media Library": "Adicionar Imagens",
+      "Workpace": "Dashboard",
     },
   },
   menu: {
