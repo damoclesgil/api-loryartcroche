@@ -13,15 +13,16 @@
     "out": "npm outdated"
   },
   "dependencies": {
-    "@creazy231/strapi-plugin-apollo-sandbox": "^0.0.13",
-    "@strapi/plugin-cloud": "4.21.0",
-    "@strapi/plugin-graphql": "^4.21.0",
-    "@strapi/plugin-i18n": "^4.21.0",
-    "@strapi/plugin-users-permissions": "^4.21.0",
-    "@strapi/strapi": "4.21.0",
+    "@creazy231/strapi-plugin-apollo-sandbox": "0.0.13",
+    "@strapi/plugin-cloud": "4.21.1",
+    "@strapi/plugin-graphql": "4.21.1",
+    "@strapi/plugin-i18n": "4.21.1",
+    "@strapi/plugin-users-permissions": "4.21.1",
+    "@strapi/provider-email-nodemailer": "4.21.1",
+    "@strapi/strapi": "4.21.1",
     "pg": "8.11.3",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-router-dom": "5.3.4",
     "styled-components": "5.3.3"
   },
@@ -37,6 +38,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "dotenv-cli": "^7.4.1"
+    "dotenv-cli": "7.4.1"
   }
 }

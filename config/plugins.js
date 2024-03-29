@@ -1,4 +1,3 @@
-
 module.exports = ({ env }) => ({
   graphql: {
     enabled: true,
@@ -16,6 +15,16 @@ module.exports = ({ env }) => ({
       apolloServer: {
         allowBatchedHttpRequests: false,
         tracing: false,
+      },
+    },
+  },
+  email: {
+    config: {
+      provider: "nodemailer",
+      providerOptions: {
+        host: "localhost",
+        port: 1025,
+        ignoreTLS: true,
       },
     },
   },
