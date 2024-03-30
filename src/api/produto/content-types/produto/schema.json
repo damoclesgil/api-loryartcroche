@@ -4,7 +4,8 @@
   "info": {
     "singularName": "produto",
     "pluralName": "produtos",
-    "displayName": "Produto"
+    "displayName": "Produtos",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -22,19 +23,21 @@
       "type": "text"
     },
     "galeria": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "videos"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "imagem_destaque": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "preco": {
       "type": "decimal",

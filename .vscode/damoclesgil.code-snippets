@@ -1,0 +1,28 @@
+{
+  "damoclesgilName": {
+    "prefix": "dg",
+    "body": ["Dâmocles Gil Marçal $1"],
+    "description": "My name",
+  },
+  "ParagraphWithBlockOfCode": {
+    "prefix": "###",
+    "body": [
+      "",
+      "### ${1}",
+      "",
+      "${2}",
+      "",
+      "```javascript",
+      "${3}",
+      "```",
+      "",
+    ],
+    "description": "Item Post with block of code",
+    "scope": "markdown",
+  },
+  "websitelink": {
+    "prefix": "dmc.com.br",
+    "body": ["https://damoclesgil.com.br"],
+    "description": "Website meu",
+  },
+}
