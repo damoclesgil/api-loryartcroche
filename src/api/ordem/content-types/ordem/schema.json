@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ordens",
+  "info": {
+    "singularName": "ordem",
+    "pluralName": "ordens",
+    "displayName": "Ordens"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "produtos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produto.produto"
+    },
+    "total_in_cents": {
+      "type": "biginteger",
+      "required": true
+    },
+    "payment_intent_id": {
+      "type": "string",
+      "required": false
+    },
+    "card_brand": {
+      "type": "string"
+    },
+    "card_last4": {
+      "type": "string"
+    }
+  }
+}

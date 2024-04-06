@@ -283,51 +283,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiFavoritoFavorito extends Schema.CollectionType {
-  collectionName: "favoritos";
-  info: {
-    singularName: "favorito";
-    pluralName: "favoritos";
-    displayName: "Favoritos";
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    user: Attribute.Relation<"api::favorito.favorito", "oneToOne", "plugin::users-permissions.user">;
-    produtos: Attribute.Relation<"api::favorito.favorito", "oneToMany", "api::produto.produto">;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<"api::favorito.favorito", "oneToOne", "admin::user"> & Attribute.Private;
-    updatedBy: Attribute.Relation<"api::favorito.favorito", "oneToOne", "admin::user"> & Attribute.Private;
-  };
-}
-
-export interface ApiProdutoProduto extends Schema.CollectionType {
-  collectionName: "produtos";
-  info: {
-    singularName: "produto";
-    pluralName: "produtos";
-    displayName: "Produtos";
-    description: "";
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    nome: Attribute.String;
-    slug: Attribute.UID<"api::produto.produto", "nome">;
-    descricao: Attribute.Text;
-    galeria: Attribute.Media;
-    imagem_destaque: Attribute.Media;
-    preco: Attribute.Decimal & Attribute.Required & Attribute.DefaultTo<0>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<"api::produto.produto", "oneToOne", "admin::user"> & Attribute.Private;
-    updatedBy: Attribute.Relation<"api::produto.produto", "oneToOne", "admin::user"> & Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: "files";
   info: {
@@ -625,6 +580,75 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiFavoritoFavorito extends Schema.CollectionType {
+  collectionName: "favoritos";
+  info: {
+    singularName: "favorito";
+    pluralName: "favoritos";
+    displayName: "Favoritos";
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    user: Attribute.Relation<"api::favorito.favorito", "oneToOne", "plugin::users-permissions.user">;
+    produtos: Attribute.Relation<"api::favorito.favorito", "oneToMany", "api::produto.produto">;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<"api::favorito.favorito", "oneToOne", "admin::user"> & Attribute.Private;
+    updatedBy: Attribute.Relation<"api::favorito.favorito", "oneToOne", "admin::user"> & Attribute.Private;
+  };
+}
+
+export interface ApiOrdemOrdem extends Schema.CollectionType {
+  collectionName: "ordens";
+  info: {
+    singularName: "ordem";
+    pluralName: "ordens";
+    displayName: "Ordens";
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    user: Attribute.Relation<"api::ordem.ordem", "oneToOne", "plugin::users-permissions.user">;
+    produtos: Attribute.Relation<"api::ordem.ordem", "oneToMany", "api::produto.produto">;
+    total_in_cents: Attribute.BigInteger & Attribute.Required;
+    payment_intent_id: Attribute.String;
+    card_brand: Attribute.String;
+    card_last4: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<"api::ordem.ordem", "oneToOne", "admin::user"> & Attribute.Private;
+    updatedBy: Attribute.Relation<"api::ordem.ordem", "oneToOne", "admin::user"> & Attribute.Private;
+  };
+}
+
+export interface ApiProdutoProduto extends Schema.CollectionType {
+  collectionName: "produtos";
+  info: {
+    singularName: "produto";
+    pluralName: "produtos";
+    displayName: "Produtos";
+    description: "";
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    nome: Attribute.String;
+    slug: Attribute.UID<"api::produto.produto", "nome">;
+    descricao: Attribute.Text;
+    galeria: Attribute.Media;
+    imagem_destaque: Attribute.Media;
+    preco: Attribute.Decimal & Attribute.Required & Attribute.DefaultTo<0>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<"api::produto.produto", "oneToOne", "admin::user"> & Attribute.Private;
+    updatedBy: Attribute.Relation<"api::produto.produto", "oneToOne", "admin::user"> & Attribute.Private;
+  };
+}
+
 declare module "@strapi/types" {
   export module Shared {
     export interface ContentTypes {
@@ -635,8 +659,6 @@ declare module "@strapi/types" {
       "admin::api-token-permission": AdminApiTokenPermission;
       "admin::transfer-token": AdminTransferToken;
       "admin::transfer-token-permission": AdminTransferTokenPermission;
-      "api::favorito.favorito": ApiFavoritoFavorito;
-      "api::produto.produto": ApiProdutoProduto;
       "plugin::upload.file": PluginUploadFile;
       "plugin::upload.folder": PluginUploadFolder;
       "plugin::content-releases.release": PluginContentReleasesRelease;
@@ -645,6 +667,9 @@ declare module "@strapi/types" {
       "plugin::users-permissions.permission": PluginUsersPermissionsPermission;
       "plugin::users-permissions.role": PluginUsersPermissionsRole;
       "plugin::users-permissions.user": PluginUsersPermissionsUser;
+      "api::favorito.favorito": ApiFavoritoFavorito;
+      "api::ordem.ordem": ApiOrdemOrdem;
+      "api::produto.produto": ApiProdutoProduto;
     }
   }
 }
