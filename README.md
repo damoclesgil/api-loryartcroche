@@ -6,6 +6,20 @@ Strapi comes with a full featured [Command Line Interface](https://docs.strapi.i
 > Email: damoclesgil@gmail.com
 > Senha do admin: Lori123456
 
+# Lembrar de dar permissoes no [strapi/admin](http://localhost:1337/admin/)
+
+## PRODUTO
+
+#### PUBLIC ROLES
+
+* find [x]
+* find.one [x]
+
+#### PRIVATE ROLES
+
+
+
+
 Env Files
 
 ```env
