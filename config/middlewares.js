@@ -6,8 +6,13 @@ module.exports = [
     config: {
       contentSecurityPolicy: {
         directives: {
-          "frame-src": ["http://localhost:*", "self", "sandbox.embed.apollographql.com"],
+          "script-src": ["'self'", "editor.unlayer.com"],
+          "frame-src": ["http://localhost:*", "'self'", "editor.unlayer.com"],
+          "img-src": ["'self'", "data:", "cdn.jsdelivr.net", "strapi.io", "s3.amazonaws.com"],
         },
+        // directives: {
+        //   "frame-src": ["http://localhost:*", "self", "sandbox.embed.apollographql.com"],
+        // },
       },
     },
   },
