@@ -43,6 +43,11 @@
       "type": "decimal",
       "required": true,
       "default": 0
+    },
+    "cores": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components-produto.component-color"
     }
   }
 }

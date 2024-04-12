@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_cores_component_colors",
+  "info": {
+    "displayName": "Color",
+    "icon": "paint",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "cor": {
+      "type": "enumeration",
+      "enum": [
+        "Rosa",
+        "Azul",
+        "Vermelho",
+        "Branco",
+        "Laranja",
+        "Verde"
+      ]
+    },
+    "produtoReferente": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::produto.produto"
+    }
+  }
+}

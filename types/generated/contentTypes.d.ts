@@ -680,6 +680,7 @@ export interface ApiProdutoProduto extends Schema.CollectionType {
     galeria: Attribute.Media;
     imagem_destaque: Attribute.Media;
     preco: Attribute.Decimal & Attribute.Required & Attribute.DefaultTo<0>;
+    cores: Attribute.Component<"components-produto.component-color", true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<"api::produto.produto", "oneToOne", "admin::user"> & Attribute.Private;
