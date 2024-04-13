@@ -1,6 +1,10 @@
 
 # 🚀 Getting started with Strapi
 
+
+Usar node na versão `18.19.1` com yarn e manter as versões das libs.
+
+
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
 > Email: damoclesgil@gmail.com
@@ -16,9 +20,6 @@ Strapi comes with a full featured [Command Line Interface](https://docs.strapi.i
 * find.one [x]
 
 #### PRIVATE ROLES
-
-
-
 
 Env Files
 

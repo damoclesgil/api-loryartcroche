@@ -4,10 +4,10 @@
  */
 import apolloSandbox from "@creazy231/strapi-plugin-apollo-sandbox/strapi-admin";
 import strapiCloud from "@strapi/plugin-cloud/strapi-admin";
-import colorPicker from "@strapi/plugin-color-picker/strapi-admin";
 import graphql from "@strapi/plugin-graphql/strapi-admin";
 import i18N from "@strapi/plugin-i18n/strapi-admin";
 import usersPermissions from "@strapi/plugin-users-permissions/strapi-admin";
+import colorPicker from "@strapi/plugin-color-picker/strapi-admin";
 import emailDesigner from "strapi-plugin-email-designer/strapi-admin";
 import { renderAdmin } from "@strapi/strapi/admin";
 
@@ -19,10 +19,10 @@ renderAdmin(document.getElementById("strapi"), {
   plugins: {
     "apollo-sandbox": apolloSandbox,
     "strapi-cloud": strapiCloud,
-    "color-picker": colorPicker,
     graphql: graphql,
     i18n: i18N,
     "users-permissions": usersPermissions,
+    "color-picker": colorPicker,
     "email-designer": emailDesigner,
   },
 });
