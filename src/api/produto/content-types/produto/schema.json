@@ -44,10 +44,26 @@
       "required": true,
       "default": 0
     },
-    "cores": {
-      "type": "component",
-      "repeatable": true,
-      "component": "components-produto.component-color"
+    "cor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
+    },
+    "nomeCor": {
+      "type": "enumeration",
+      "enum": [
+        "Rosa",
+        "Azul",
+        "Vermelho",
+        "Branco",
+        "Laranja",
+        "Verde"
+      ]
+    },
+    "produtosReferentes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produto.produto"
     }
   }
 }

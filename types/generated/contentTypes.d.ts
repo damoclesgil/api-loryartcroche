@@ -624,6 +624,7 @@ export interface ApiFavoritoFavorito extends Schema.CollectionType {
     singularName: "favorito";
     pluralName: "favoritos";
     displayName: "Favoritos";
+    description: "";
   };
   options: {
     draftAndPublish: false;
@@ -631,6 +632,7 @@ export interface ApiFavoritoFavorito extends Schema.CollectionType {
   attributes: {
     user: Attribute.Relation<"api::favorito.favorito", "oneToOne", "plugin::users-permissions.user">;
     produtos: Attribute.Relation<"api::favorito.favorito", "oneToMany", "api::produto.produto">;
+    corField: Attribute.String & Attribute.CustomField<"plugin::color-picker.color">;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<"api::favorito.favorito", "oneToOne", "admin::user"> & Attribute.Private;
@@ -680,7 +682,9 @@ export interface ApiProdutoProduto extends Schema.CollectionType {
     galeria: Attribute.Media;
     imagem_destaque: Attribute.Media;
     preco: Attribute.Decimal & Attribute.Required & Attribute.DefaultTo<0>;
-    cores: Attribute.Component<"components-produto.component-color", true>;
+    cor: Attribute.String & Attribute.CustomField<"plugin::color-picker.color">;
+    nomeCor: Attribute.Enumeration<["Rosa", "Azul", "Vermelho", "Branco", "Laranja", "Verde"]>;
+    produtosReferentes: Attribute.Relation<"api::produto.produto", "oneToMany", "api::produto.produto">;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<"api::produto.produto", "oneToOne", "admin::user"> & Attribute.Private;

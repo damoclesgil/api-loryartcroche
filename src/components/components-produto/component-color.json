@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "cor": {
+    "nomeDaCor": {
       "type": "enumeration",
       "enum": [
         "Rosa",
@@ -18,10 +18,15 @@
         "Verde"
       ]
     },
-    "produtoReferente": {
+    "produto_referentes": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::produto.produto"
+    },
+    "cor": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
     }
   }
 }

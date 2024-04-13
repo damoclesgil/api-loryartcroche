@@ -4,7 +4,8 @@
   "info": {
     "singularName": "favorito",
     "pluralName": "favoritos",
-    "displayName": "Favoritos"
+    "displayName": "Favoritos",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -20,6 +21,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::produto.produto"
+    },
+    "corField": {
+      "type": "customField",
+      "regex": "^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$",
+      "customField": "plugin::color-picker.color"
     }
   }
 }

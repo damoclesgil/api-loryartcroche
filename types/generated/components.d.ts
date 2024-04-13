@@ -8,8 +8,9 @@ export interface ComponentsProdutoComponentColor extends Schema.Component {
     description: "";
   };
   attributes: {
-    cor: Attribute.Enumeration<["Rosa", "Azul", "Vermelho", "Branco", "Laranja", "Verde"]>;
-    produtoReferente: Attribute.Relation<"components-produto.component-color", "oneToOne", "api::produto.produto">;
+    nomeDaCor: Attribute.Enumeration<["Rosa", "Azul", "Vermelho", "Branco", "Laranja", "Verde"]>;
+    produto_referentes: Attribute.Relation<"components-produto.component-color", "oneToMany", "api::produto.produto">;
+    cor: Attribute.String & Attribute.CustomField<"plugin::color-picker.color">;
   };
 }
 

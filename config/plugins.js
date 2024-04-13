@@ -102,4 +102,11 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  'color-picker': {
+    enabled: true,
+    config: {
+      defaultColor: '#ffffff',
+      presetColors: ['#000000', '#ffffff', '#ff0000', '#00ff00', '#0000ff'],
+    }
+  }
 });
