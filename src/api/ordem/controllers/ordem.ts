@@ -4,7 +4,9 @@
  * ordem controller
  */
 
+// @ts-ignore
 const stripe = require("stripe")(process.env.STRIPE_KEY);
+// @ts-ignore
 const { createCoreController } = require("@strapi/strapi").factories;
 // const orderTemplate = require("../../../config/email-templates/order");
 // const orderTemplate = require("../../../config/email-templates/order");

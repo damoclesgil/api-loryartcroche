@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * favorito service
+ * ordem service
  */
-
+// @ts-ignore
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::favorito.favorito');
+module.exports = createCoreService('api::ordem.ordem');

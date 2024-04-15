@@ -632,7 +632,6 @@ export interface ApiFavoritoFavorito extends Schema.CollectionType {
   attributes: {
     user: Attribute.Relation<"api::favorito.favorito", "oneToOne", "plugin::users-permissions.user">;
     produtos: Attribute.Relation<"api::favorito.favorito", "oneToMany", "api::produto.produto">;
-    corField: Attribute.String & Attribute.CustomField<"plugin::color-picker.color">;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<"api::favorito.favorito", "oneToOne", "admin::user"> & Attribute.Private;

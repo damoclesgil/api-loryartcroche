@@ -7,6 +7,7 @@
     "develop": "strapi develop --debug",
     "dev:local": "dotenv -e .env.local strapi develop --watch-admin",
     "dev": "strapi develop",
+    "dev:watch": "strapi develop --watch-admin",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
