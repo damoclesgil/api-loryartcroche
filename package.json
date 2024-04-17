@@ -14,6 +14,7 @@
     "out": "npm outdated"
   },
   "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^2.1.1",
     "@creazy231/strapi-plugin-apollo-sandbox": "0.0.13",
     "@strapi/plugin-cloud": "4.23.0",
     "@strapi/plugin-color-picker": "4.23.0",

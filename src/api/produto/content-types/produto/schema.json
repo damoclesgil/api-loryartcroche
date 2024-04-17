@@ -19,9 +19,6 @@
       "type": "uid",
       "targetField": "nome"
     },
-    "descricao": {
-      "type": "text"
-    },
     "galeria": {
       "type": "media",
       "multiple": true,
@@ -64,6 +61,13 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::produto.produto"
+    },
+    "descricao": {
+      "type": "customField",
+      "options": {
+        "preset": "blockBalloon"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }

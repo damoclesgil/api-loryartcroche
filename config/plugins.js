@@ -19,7 +19,6 @@ module.exports = ({ env }) => ({
     },
   },
   "apollo-sandbox": {
-
     // enables the plugin only in development mode
     // if you also want to use it in production, set this to true
     // keep in mind that graphql playground has to be enabled
@@ -39,7 +38,7 @@ module.exports = ({ env }) => ({
       },
     },
   },
-  'email-designer': {
+  "email-designer": {
     enabled: true,
 
     // ⬇︎ Add the config property
@@ -52,7 +51,7 @@ module.exports = ({ env }) => ({
           heading: {
             properties: {
               text: {
-                value: 'This is the new default text!',
+                value: "This is the new default text!",
               },
             },
           },
@@ -60,7 +59,7 @@ module.exports = ({ env }) => ({
         options: {
           features: {
             colorPicker: {
-              presets: ['#D9E3F0', '#F47373', '#697689', '#37D67A'],
+              presets: ["#D9E3F0", "#F47373", "#697689", "#37D67A"],
             },
           },
           fonts: {
@@ -70,43 +69,53 @@ module.exports = ({ env }) => ({
              */
             customFonts: [
               {
-                label: 'Anton',
+                label: "Anton",
                 value: "'Anton', sans-serif",
-                url: 'https://fonts.googleapis.com/css?family=Anton',
+                url: "https://fonts.googleapis.com/css?family=Anton",
               },
               {
-                label: 'Lato',
+                label: "Lato",
                 value: "'Lato', Tahoma, Verdana, sans-serif",
-                url: 'https://fonts.googleapis.com/css?family=Lato',
+                url: "https://fonts.googleapis.com/css?family=Lato",
               },
               // ...
             ],
           },
           mergeTags: [
             {
-              name: 'Email',
-              value: '{{ USER.username }}',
-              sample: 'john@doe.com',
+              name: "Email",
+              value: "{{ USER.username }}",
+              sample: "john@doe.com",
             },
             // ...
           ],
         },
         appearance: {
-          theme: 'dark',
+          theme: "dark",
           panels: {
             tools: {
-              dock: 'left',
+              dock: "left",
             },
           },
         },
       },
     },
   },
-  'color-picker': {
+  "color-picker": {
     enabled: true,
     config: {
-      defaultColor: '#ffffff',
-      presetColors: ['#000000', '#ffffff', '#ff0000', '#00ff00', '#0000ff'],
-    }
-  }
+      defaultColor: "#ffffff",
+      presetColors: ["#000000", "#ffffff", "#ff0000", "#00ff00", "#0000ff"],
+    },
+  },
+  ckeditor5: {
+    enabled: true,
+    config: {
+      language: {
+        ignorei18n: true,
+        ui: "pt-BR",
+        content: "pt-BR",
+      },
+    },
+  },
 });
