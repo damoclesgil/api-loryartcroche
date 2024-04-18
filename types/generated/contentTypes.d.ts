@@ -687,7 +687,7 @@ export interface ApiProdutoProduto extends Schema.CollectionType {
       Attribute.CustomField<
         "plugin::ckeditor5.CKEditor",
         {
-          preset: "blockBalloon";
+          preset: "custom";
         }
       >;
     createdAt: Attribute.DateTime;

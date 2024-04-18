@@ -107,15 +107,5 @@ module.exports = ({ env }) => ({
       defaultColor: "#ffffff",
       presetColors: ["#000000", "#ffffff", "#ff0000", "#00ff00", "#0000ff"],
     },
-  },
-  ckeditor5: {
-    enabled: true,
-    config: {
-      language: {
-        ignorei18n: true,
-        ui: "pt-BR",
-        content: "pt-BR",
-      },
-    },
-  },
+  }
 });

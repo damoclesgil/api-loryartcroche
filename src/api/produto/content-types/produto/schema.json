@@ -65,7 +65,7 @@
     "descricao": {
       "type": "customField",
       "options": {
-        "preset": "blockBalloon"
+        "preset": "custom"
       },
       "customField": "plugin::ckeditor5.CKEditor"
     }

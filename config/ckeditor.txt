@@ -50,7 +50,7 @@ globalThis.CKEditorConfig = {
                 metadatas: {
                   intlLabel: {
                     id: "ckeditor5.preset.custom.label",
-                    defaultMessage: "Custom version",
+                    defaultMessage: "Custom Version By Damocles",
                   },
                 },
             },
@@ -59,6 +59,7 @@ globalThis.CKEditorConfig = {
                 /* You can find all available built-in plugins
                 in the admin/src/components/Input/CKEditor/configs/base.js */
                 plugins: [
+                    CKEditor5.alignment.Alignment,
                     CKEditor5.autoformat.Autoformat,
                     CKEditor5.basicStyles.Bold,
                     CKEditor5.basicStyles.Italic,
@@ -95,13 +96,18 @@ globalThis.CKEditorConfig = {
 
                   language:{
                     // ignorei18n: true,
-                    // ui:'he',
-                    // content:'he'
+                      ui: "pt-br",
+                      content: "pt-br",
                   },
                   toolbar: [
                     'heading',
                     '|',
                     'bold', 'italic', 'link', 'bulletedList', 'numberedList',
+                    '|',
+                    'alignment:left',
+                    'alignment:center',
+                    'alignment:right',
+                    'alignment:justify',
                     '|',
                     'strapiMediaLib', 'insertTable',
                     '|',
