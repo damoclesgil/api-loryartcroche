@@ -107,5 +107,21 @@ module.exports = ({ env }) => ({
       defaultColor: "#ffffff",
       presetColors: ["#000000", "#ffffff", "#ff0000", "#00ff00", "#0000ff"],
     },
-  }
+  },
+  // upload: {
+  //   enabled: false,
+  //   config: {
+  //     provider: 'cloudinary',
+  //     providerOptions: {
+  //       cloud_name: env('CLOUDINARY_NAME'),
+  //       api_key: env('CLOUDINARY_KEY'),
+  //       api_secret: env('CLOUDINARY_SECRET'),
+  //     },
+  //     actionOptions: {
+  //       upload: {},
+  //       uploadStream: {},
+  //       delete: {},
+  //     },
+  //   },
+  // },
 });

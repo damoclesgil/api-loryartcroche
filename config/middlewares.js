@@ -1,18 +1,24 @@
 module.exports = [
   "strapi::errors",
-  // "strapi::security",
   {
     name: "strapi::security",
     config: {
       contentSecurityPolicy: {
+        // useDefaults: true,
         directives: {
           "script-src": ["'self'", "editor.unlayer.com"],
-          "frame-src": ["http://localhost:*", "'self'", "editor.unlayer.com"],
-          "img-src": ["'self'", "data:", "cdn.jsdelivr.net", "strapi.io", "s3.amazonaws.com"],
+          "frame-src": ["http://localhost:*", "'self'", "editor.unlayer.com",  "sandbox.embed.apollographql.com"],
+          // 'connect-src': ["'self'", 'https:'],
+          // 'img-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io', 'res.cloudinary.com'],
+          // 'media-src': [
+          //   "'self'",
+          //   'data:',
+          //   'blob:',
+          //   'market-assets.strapi.io',
+          //   'res.cloudinary.com',
+          // ],
+          // upgradeInsecureRequests: null,
         },
-        // directives: {
-        //   "frame-src": ["http://localhost:*", "self", "sandbox.embed.apollographql.com"],
-        // },
       },
     },
   },
