@@ -4,6 +4,24 @@
     "body": ["Dâmocles Gil Marçal $1"],
     "description": "My name",
   },
+  "Typescript nocheck": {
+    "scope": "typescript, typescriptreact",
+    "prefix": "tsnocheck",
+    "body": "// @ts-nocheck",
+    "description": "Ignorar todos errors, lembrar de colocar no topo do arquivo."
+  },
+  "Typescript ignore": {
+    "scope": "typescript, typescriptreact",
+    "prefix": "tsignore",
+    "body": "// @ts-ignore",
+    "description": "Ignorar erro da linha seguinte."
+  },
+  "lory": {
+    "scope": "typescript, typescriptreact, html, javascript, vue, php",
+    "prefix": "lory",
+    "body": "Lory Art Crochê loryartcroche",
+    "description": "Lory Art Crochê text"
+  },
   "ParagraphWithBlockOfCode": {
     "prefix": "###",
     "body": [

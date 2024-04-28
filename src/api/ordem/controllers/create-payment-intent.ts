@@ -1,7 +1,7 @@
 // @ts-ignore
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 
-module.exports = {
+export default {
   async createPayment(ctx, next) {
     const { cart } = ctx.request.body;
 

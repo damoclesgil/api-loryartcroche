@@ -532,7 +532,7 @@ export interface ApiProdutoProduto extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::produto.produto'
     >;
-    descricao: Schema.Attribute.Blocks;
+    descricao: Schema.Attribute.RichText;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

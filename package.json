@@ -2,13 +2,14 @@
   "name": "api-loryartcroche",
   "private": true,
   "version": "2.0.0",
-  "description": "A Strapi application",
+  "description": "Api ecommerce Lory Art Crochê with stapi",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
+  "devDependencies": {},
   "dependencies": {
     "@strapi/plugin-cloud": "5.0.0-beta.5",
     "@strapi/plugin-email": "5.0.0-beta.5",
@@ -18,7 +19,6 @@
     "@strapi/plugin-color-picker": "5.0.0-beta.5",
     "@strapi/strapi": "5.0.0-beta.5",
     "stripe": "15.3.0",
-    "better-sqlite3": "9.4.3",
     "pg": "^8.11.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -26,10 +26,10 @@
     "styled-components": "5.3.3"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "damoclesgil"
   },
   "strapi": {
-    "uuid": "ef8199e5-c2b8-4a4e-b008-b71073f65cfe"
+    "uuid": "5d4f6185-9ee6-46b2-bbb3-7348b8284227"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",

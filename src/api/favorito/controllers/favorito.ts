@@ -1,12 +1,9 @@
-"use strict";
-
 /**
  * favorito controller
  */
-// @ts-ignore
-const { createCoreController } = require("@strapi/strapi").factories;
+import { factories } from '@strapi/strapi';
 
-module.exports = createCoreController("api::favorito.favorito", ({ strapi }) => ({
+export default factories.createCoreController("api::favorito.favorito", ({ strapi }) => ({
   /* */
   async create(ctx) {
     const token = await strapi.plugins["users-permissions"].services.jwt.getToken(ctx);
@@ -14,6 +11,7 @@ module.exports = createCoreController("api::favorito.favorito", ({ strapi }) => 
     /* entityService é um Método de Segurança */
     const newFavorite = await strapi.entityService.create("api::favorito.favorito", {
       data: {
+        // @ts-ignore
         produtos: ctx.request.body.data.produtos,
         user: token.id,
       },

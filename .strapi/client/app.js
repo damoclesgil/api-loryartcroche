@@ -9,7 +9,7 @@ import usersPermissions from "@strapi/plugin-users-permissions/strapi-admin";
 import colorPicker from "@strapi/plugin-color-picker/strapi-admin";
 import { renderAdmin } from "@strapi/strapi/admin";
 
-import customisations from "../../src/admin/app.js";
+import customisations from "../../src/admin/app.tsx";
 
 renderAdmin(document.getElementById("strapi"), {
   customisations,

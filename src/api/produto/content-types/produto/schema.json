@@ -63,7 +63,7 @@
       "target": "api::produto.produto"
     },
     "descricao": {
-      "type": "blocks"
+      "type": "richtext"
     }
   }
 }

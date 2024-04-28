@@ -1,18 +1,10 @@
 {
   "recommendations": [
-    "astro-build.astro-vscode",
     "dbaeumer.vscode-eslint",
     "visualstudioexptteam.vscodeintellicode",
     "visualstudioexptteam.intellicode-api-usage-examples",
     "esbenp.prettier-vscode",
-    "vscode-icons-team.vscode-icons",
-    "bradlc.vscode-tailwindcss",
-    "christian-kohler.path-intellisense",
-    "davidanson.vscode-markdownlint",
-    "akamud.vscode-theme-onedark",
-    "unifiedjs.vscode-mdx",
     "ms-vscode.vscode-typescript-next",
-    "vue.vscode-typescript-vue-plugin"
   ],
   "unwantedRecommendations": []
 }

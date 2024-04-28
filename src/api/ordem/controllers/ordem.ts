@@ -4,12 +4,13 @@
  * ordem controller
  */
 
-// @ts-ignore
 const stripe = require("stripe")(process.env.STRIPE_KEY);
-// @ts-ignore
-const { createCoreController } = require("@strapi/strapi").factories;
 // const orderTemplate = require("../../../config/email-templates/order");
 // const orderTemplate = require("../../../config/email-templates/order");
+
+import { factories } from '@strapi/strapi'
+
+
 
 const subject = "Ordem em Lory Art Crochê";
 
@@ -92,9 +93,11 @@ const calculateTotalPrice = async products => {
   return Number((amount * 100).toFixed(0));
 };
 
-module.exports = createCoreController("api::ordem.ordem", ({ strapi }) => ({
+export default factories.createCoreController('api::ordem.ordem',  ({ strapi }) => ({
+
   async create(ctx) {
     // pegar as informações do frontend
+    // @ts-ignore
     const { cart, paymentIntentId, paymentMethod } = ctx.request.body.data;
 
     // const userInfo = await strapi.plugins['users-permissions'].services.user.fetchAuthenticatedUser(userId);
@@ -104,7 +107,6 @@ module.exports = createCoreController("api::ordem.ordem", ({ strapi }) => ({
 
     const produtos = await cartItems(cartProductsIds);
 
-    console.log(produtos)
     /*
     [
   {
@@ -142,6 +144,7 @@ module.exports = createCoreController("api::ordem.ordem", ({ strapi }) => ({
     };
 
     const createOrdemPagamento = await strapi.entityService.create("api::ordem.ordem", {
+      // @ts-ignore
       data: {
         ...entry,
       },
@@ -183,5 +186,7 @@ module.exports = createCoreController("api::ordem.ordem", ({ strapi }) => ({
     // enviar um email da compra para o usuário
     const sanitizedResults = await this.sanitizeOutput(createOrdemPagamento, ctx);
     return sanitizedResults;
-  },
-}));
+  }
+
+}))
+
