@@ -1,45 +1,6 @@
-
 # 🚀 Getting started with Strapi
 
-
-Usar node na versão `18.19.1` com yarn e manter as versões das libs.
-
-
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
-
-> Email: damoclesgil@gmail.com
-> Senha do admin: Lori123456
-
-# Lembrar de dar permissoes no [strapi/admin](http://localhost:1337/admin/)
-
-## PRODUTO
-
-#### PUBLIC ROLES
-
-* find [x]
-* find.one [x]
-
-#### PRIVATE ROLES
-
-Env Files
-
-```env
-HOST=0.0.0.0
-PORT=1337
-APP_KEYS=fKqLuBukkZe0ROluylBddw==,TIb9JtwfDYV/343KAM0Ihw==,fRfqa5fZubXvcnkbeHsp5g==,Sno1JldL2bCyZlmnr5eOMw==
-API_TOKEN_SALT=H5JzS8HAlWlBdWyzFbZpbw==
-ADMIN_JWT_SECRET=yYkZnKjW6VIVF/mDPCDSEA==
-TRANSFER_TOKEN_SALT=pDPIXD83v0mSL5qDgxfTwA==
-# Database
-DATABASE_CLIENT=postgres
-DATABASE_HOST=127.0.0.1
-DATABASE_PORT=5432
-DATABASE_NAME=loryartcroche
-DATABASE_USERNAME=postgres
-DATABASE_PASSWORD=
-DATABASE_SSL=false
-JWT_SECRET=VXt/Dz0uYPV/+Rfg1ISrAQ==
-```
 
 ### `develop`
 
@@ -94,8 +55,3 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 ---
 
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
-
-
-## outros
-// deploy sem encryptar
-yarn strapi export --no-encrypt

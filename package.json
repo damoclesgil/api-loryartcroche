@@ -1,51 +1,39 @@
 {
   "name": "api-loryartcroche",
   "private": true,
-  "version": "0.1.0",
+  "version": "2.0.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop --debug",
-    "dev:local": "dotenv -e .env.local strapi develop --watch-admin",
-    "dev": "strapi develop",
-    "dev:watch": "strapi develop --watch-admin",
+    "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "bd": "strapi export -- --no-encrypt",
-    "strapi": "strapi",
-    "out": "npm outdated",
-    "update:libs": "yarn upgrade-interactive --latest"
+    "strapi": "strapi"
   },
   "dependencies": {
-    "@_sh/strapi-plugin-ckeditor": "^2.1.1",
-    "@creazy231/strapi-plugin-apollo-sandbox": "0.0.13",
-    "@strapi/plugin-cloud": "4.24.0",
-    "@strapi/plugin-color-picker": "4.24.0",
-    "@strapi/plugin-graphql": "4.24.0",
-    "@strapi/plugin-i18n": "4.24.0",
-    "@strapi/plugin-users-permissions": "4.24.0",
-    "@strapi/provider-email-nodemailer": "4.24.0",
-    "@strapi/provider-upload-cloudinary": "^4.24.0",
-    "@strapi/strapi": "^4.24.0",
-    "pg": "8.11.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-router-dom": "5.3.4",
-    "strapi-plugin-email-designer": "2.2.1",
+    "@strapi/plugin-cloud": "5.0.0-beta.5",
+    "@strapi/plugin-email": "5.0.0-beta.5",
+    "@strapi/plugin-graphql": "5.0.0-beta.5",
+    "@strapi/provider-email-nodemailer": "5.0.0-beta.5",
+    "@strapi/plugin-users-permissions": "5.0.0-beta.5",
+    "@strapi/plugin-color-picker": "5.0.0-beta.5",
+    "@strapi/strapi": "5.0.0-beta.5",
     "stripe": "15.3.0",
+    "better-sqlite3": "9.4.3",
+    "pg": "^8.11.5",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
     "styled-components": "5.3.3"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "316add5d-d3c4-4b71-a43c-a0aad645010c"
+    "uuid": "ef8199e5-c2b8-4a4e-b008-b71073f65cfe"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT",
-  "devDependencies": {
-    "dotenv-cli": "7.4.1"
-  }
+  "license": "MIT"
 }
