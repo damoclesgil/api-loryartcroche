@@ -2,6 +2,8 @@ import type { StrapiApp } from '@strapi/strapi/admin';
 // @ts-ignore
 import Icon from "./extensions/logo_loryart.png";
 // @ts-ignore
+import Favicon from "./extensions/favicon.ico";
+// @ts-ignore
 import Logo from "./extensions/logo_LoryArtCrocheColorida.png";
 
 export default {
@@ -10,7 +12,7 @@ export default {
       logo: Logo,
     },
     head: {
-      favicon: Icon,
+      favicon: Favicon,
       title: "lory",
     },
     locales: ["pt-BR"],
