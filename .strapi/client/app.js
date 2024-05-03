@@ -3,9 +3,7 @@
  * Any modifications made will be discarded.
  */
 import strapiCloud from "@strapi/plugin-cloud/strapi-admin";
-import email from "@strapi/plugin-email/strapi-admin";
 import graphql from "@strapi/plugin-graphql/strapi-admin";
-import usersPermissions from "@strapi/plugin-users-permissions/strapi-admin";
 import colorPicker from "@strapi/plugin-color-picker/strapi-admin";
 import { renderAdmin } from "@strapi/strapi/admin";
 
@@ -16,9 +14,7 @@ renderAdmin(document.getElementById("strapi"), {
 
   plugins: {
     "strapi-cloud": strapiCloud,
-    email: email,
     graphql: graphql,
-    "users-permissions": usersPermissions,
     "color-picker": colorPicker,
   },
 });
