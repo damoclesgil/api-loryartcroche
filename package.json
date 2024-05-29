@@ -9,27 +9,29 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "ajv": "^8.14.0"
+  },
   "dependencies": {
     "@strapi/plugin-cloud": "5.0.0-beta.5",
+    "@strapi/plugin-color-picker": "5.0.0-beta.5",
     "@strapi/plugin-email": "5.0.0-beta.5",
     "@strapi/plugin-graphql": "5.0.0-beta.5",
-    "@strapi/provider-email-nodemailer": "5.0.0-beta.5",
     "@strapi/plugin-users-permissions": "5.0.0-beta.5",
-    "@strapi/plugin-color-picker": "5.0.0-beta.5",
+    "@strapi/provider-email-nodemailer": "5.0.0-beta.5",
     "@strapi/strapi": "5.0.0-beta.5",
-    "stripe": "15.3.0",
     "pg": "^8.11.5",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.0.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.22.3",
+    "stripe": "15.7.0",
     "styled-components": "5.3.3"
   },
   "author": {
     "name": "damoclesgil"
   },
   "strapi": {
-    "uuid": "5d4f6185-9ee6-46b2-bbb3-7348b8284227"
+    "uuid": "api-damoclesgil-01"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
