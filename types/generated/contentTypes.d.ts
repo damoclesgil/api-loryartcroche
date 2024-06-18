@@ -696,8 +696,8 @@ export interface ApiProdutoProduto extends Schema.CollectionType {
   attributes: {
     nome: Attribute.String;
     slug: Attribute.UID<"api::produto.produto", "nome">;
-    galeria: Attribute.Media;
-    imagem_destaque: Attribute.Media;
+    galeria: Attribute.Media<"images" | "videos", true>;
+    imagem_destaque: Attribute.Media<"images">;
     preco: Attribute.Decimal & Attribute.Required & Attribute.DefaultTo<0>;
     cor: Attribute.String & Attribute.CustomField<"plugin::color-picker.color">;
     nomeCor: Attribute.Enumeration<["Rosa", "Azul", "Vermelho", "Branco", "Laranja", "Verde"]>;

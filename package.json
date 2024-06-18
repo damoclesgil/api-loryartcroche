@@ -18,20 +18,20 @@
   "dependencies": {
     "@_sh/strapi-plugin-ckeditor": "2.1.1",
     "@creazy231/strapi-plugin-apollo-sandbox": "0.0.13",
-    "@strapi/plugin-cloud": "4.24.0",
-    "@strapi/plugin-color-picker": "4.24.0",
-    "@strapi/plugin-graphql": "4.24.0",
-    "@strapi/plugin-i18n": "4.24.0",
-    "@strapi/plugin-users-permissions": "4.24.0",
-    "@strapi/provider-email-nodemailer": "4.24.0",
-    "@strapi/provider-upload-cloudinary": "4.24.0",
-    "@strapi/strapi": "4.24.0",
-    "pg": "8.11.5",
+    "@strapi/plugin-cloud": "4.25.0",
+    "@strapi/plugin-color-picker": "4.25.0",
+    "@strapi/plugin-graphql": "4.25.0",
+    "@strapi/plugin-i18n": "4.25.0",
+    "@strapi/plugin-users-permissions": "4.25.0",
+    "@strapi/provider-email-nodemailer": "4.25.0",
+    "@strapi/provider-upload-cloudinary": "4.25.0",
+    "@strapi/strapi": "4.25.0",
+    "pg": "8.12.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "5.3.4",
     "strapi-plugin-email-designer": "2.2.1",
-    "stripe": "15.4.0",
+    "stripe": "15.11.0",
     "styled-components": "5.3.3"
   },
   "author": {
@@ -46,6 +46,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "dotenv-cli": "7.4.1"
+    "dotenv-cli": "7.4.2"
   }
 }
