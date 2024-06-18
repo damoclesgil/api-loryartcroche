@@ -206,8 +206,8 @@ export interface PluginContentReleasesReleaseAction
   attributes: {
     type: Schema.Attribute.Enumeration<['publish', 'unpublish']> &
       Schema.Attribute.Required;
-    entry: Schema.Attribute.Relation<'morphToOne'>;
     contentType: Schema.Attribute.String & Schema.Attribute.Required;
+    entryDocumentId: Schema.Attribute.String;
     locale: Schema.Attribute.String;
     release: Schema.Attribute.Relation<
       'manyToOne',
@@ -518,8 +518,8 @@ export interface ApiProdutoProduto extends Struct.CollectionTypeSchema {
   attributes: {
     nome: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'nome'>;
-    galeria: Schema.Attribute.Media;
-    imagem_destaque: Schema.Attribute.Media;
+    galeria: Schema.Attribute.Media<'images' | 'videos', true>;
+    imagem_destaque: Schema.Attribute.Media<'images'>;
     preco: Schema.Attribute.Decimal &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<0>;
