@@ -1,51 +1,56 @@
+<div align="center">
+
+![Lory Art Croche](./src/admin/extensions/logo_LoryArtCrocheColorida.png)
+
+</div>
+
+This is the api of the [loryartcroche](https://www.instagram.com/loryartcroche/) e-commerce that was created with the intention of selling and promoting its handcrafted products.
+
+The project have the front-end too: [front-loryartcroche](https://github.com/damoclesgil/front-loryartcroche)
 
 # 🚀 Getting started with Strapi
 
-
 Usar node na versão `18.19.1` com yarn e manter as versões das libs.
-
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
-> Email: damoclesgil@gmail.com
-> Senha do admin: Lori123456
+## ⚠️ Remember to set access permissions [strapi/admin](http://localhost:1337/admin/)
 
-# Lembrar de dar permissoes no [strapi/admin](http://localhost:1337/admin/)
+- Public Roles
 
-## PRODUTO
+1. find [x]
+1. find.one [x]
 
-#### PUBLIC ROLES
+- Private Roles
 
-* find [x]
-* find.one [x]
+1. find [x]
+2. find.one [x]
 
-#### PRIVATE ROLES
-
-Env Files
+- Environment Variables
 
 ```env
 HOST=0.0.0.0
 PORT=1337
-APP_KEYS=fKqLuBukkZe0ROluylBddw==,TIb9JtwfDYV/343KAM0Ihw==,fRfqa5fZubXvcnkbeHsp5g==,Sno1JldL2bCyZlmnr5eOMw==
-API_TOKEN_SALT=H5JzS8HAlWlBdWyzFbZpbw==
-ADMIN_JWT_SECRET=yYkZnKjW6VIVF/mDPCDSEA==
-TRANSFER_TOKEN_SALT=pDPIXD83v0mSL5qDgxfTwA==
+APP_KEYS=
+API_TOKEN_SALT=
+ADMIN_JWT_SECRET=
+TRANSFER_TOKEN_SALT=
 # Database
 DATABASE_CLIENT=postgres
 DATABASE_HOST=127.0.0.1
 DATABASE_PORT=5432
-DATABASE_NAME=loryartcroche
+DATABASE_NAME=
 DATABASE_USERNAME=postgres
 DATABASE_PASSWORD=
 DATABASE_SSL=false
-JWT_SECRET=VXt/Dz0uYPV/+Rfg1ISrAQ==
+JWT_SECRET=
 ```
 
 ### `develop`
 
 Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
 
-```
+```cli
 npm run develop
 # or
 yarn develop
@@ -55,7 +60,7 @@ yarn develop
 
 Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
 
-```
+```cli
 npm run start
 # or
 yarn start
@@ -65,7 +70,7 @@ yarn start
 
 Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
 
-```
+```cli
 npm run build
 # or
 yarn build
@@ -93,9 +98,8 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 
 ---
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+## Deploy Strapi
 
-
-## outros
-// deploy sem encryptar
+```cli
 yarn strapi export --no-encrypt
+```
