@@ -114,3 +114,4 @@ build
 .env.local
 yarn.lock
 package-lock.json
+.env
