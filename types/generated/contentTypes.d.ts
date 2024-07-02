@@ -445,6 +445,30 @@ export interface PluginUsersPermissionsUser
   };
 }
 
+export interface ApiComentarioComentario extends Struct.CollectionTypeSchema {
+  collectionName: 'comentarios';
+  info: {
+    singularName: 'comentario';
+    pluralName: 'comentarios';
+    displayName: 'Comentario';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    descricao: Schema.Attribute.Text;
+    nomeUsuario: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+  };
+}
+
 export interface ApiFavoritoFavorito extends Struct.CollectionTypeSchema {
   collectionName: 'favoritos';
   info: {
@@ -903,6 +927,7 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::comentario.comentario': ApiComentarioComentario;
       'api::favorito.favorito': ApiFavoritoFavorito;
       'api::ordem.ordem': ApiOrdemOrdem;
       'api::produto.produto': ApiProdutoProduto;
